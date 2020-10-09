@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/v1")
 public class CustomerController {
 	
-	@GetMapping("/customer")
+	@GetMapping("/customer") //vulnerability: static text
 	public Customer getCostomer() {
 		return new Customer("vishal", "kumar");
 	}
